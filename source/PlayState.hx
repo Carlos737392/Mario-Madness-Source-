@@ -13,6 +13,10 @@ import flixel.FlxGame;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.FlxState;
+#if android
+import android.flixel.FlxVirtualPad;
+#end	
+
 import flixel.FlxSubState;
 import flixel.addons.display.FlxGridOverlay;
 import flixel.addons.effects.FlxTrail;
@@ -2838,7 +2842,7 @@ class PlayState extends MusicBeatState
 		}
 		doDeathCheck();
 
-		if (controls.DODGE && !inCutscene && !endingSong && !isDodging && !canDodge && curStage == 'exeport'){ //PONELE MÁS REQUISITOS LA CTM
+		if (controls.DODGE _vpad.buttonA.justPressed && !inCutscene && !endingSong && !isDodging && !canDodge && curStage == 'exeport'){ //PONELE MÁS REQUISITOS LA CTM
 			boyfriend.playAnim('dodge', true);
 			isDodging = true;
 			canDodge = true;
