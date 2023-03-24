@@ -237,7 +237,7 @@ class PlayState extends MusicBeatState
 	var estatica:FlxSprite;
 	var liveScreen:FlxSprite;
 	var blackBarThingie:FlxSprite;
-
+        var _vpad:FlxVirtualPad;
 	var bgfeo:BGSprite;
 	var aguaExe:BGSprite;
 	var sueloExe:BGSprite;
@@ -1513,6 +1513,13 @@ class PlayState extends MusicBeatState
 		// FlxG.camera.alpha = 0.7;
 		// UI_camera.zoom = 1;
 
+	#if android
+                addAndroidControls();
+                androidControls.visible = true;
+	_vpad = new FlxVirtualPad(NONE, A);
+	_vpad.cameras = [camHUD];
+	this.add(_vpad);
+                #end
 		// cameras = [FlxG.cameras.list[1]];
 		startingSong = true;
 		updateTime = true;
@@ -2163,9 +2170,9 @@ class PlayState extends MusicBeatState
 
 		var songName:String = Paths.formatToSongPath(SONG.song);
 		var file:String = Paths.json(songName + '/events');
-		#if sys
+		#if desktop 
 		if (FileSystem.exists(Paths.modsJson(songName + '/events')) || FileSystem.exists(file)) {
-		#else
+		#elseif android 
 		if (OpenFlAssets.exists(file)) {
 		#end
 			var eventsData:Array<SwagSection> = Song.loadFromJson('events', songName).notes;
@@ -2642,7 +2649,7 @@ class PlayState extends MusicBeatState
 		}
 		botplayTxt.visible = cpuControlled;
 
-		if (FlxG.keys.justPressed.ENTER && startedCountdown && canPause)
+		if (FlxG.keys.justPressed.ENTER #if android || FlxG.android.justReleased.BACK #end && startedCountdown && canPause)
 		{
 			var ret:Dynamic = callOnLuas('onPause', []);
 			if(ret != FunkinLua.Function_Stop) {
