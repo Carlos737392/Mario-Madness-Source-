@@ -160,6 +160,11 @@ class CustomFreeplayState extends MusicBeatState
 		add(descText);
 
 		changeSelection();
+		
+		#if android
+                addVirtualPad(LEFT_RIGHT, A_B);
+                #end
+		
 		super.create();
 	}
 
