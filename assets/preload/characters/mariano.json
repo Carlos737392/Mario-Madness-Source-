@@ -2,8 +2,19 @@
 	"animations": [
 		{
 			"offsets": [
-				-56,
-				3
+				-64,
+				116
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "MarioIdle"
+		},
+		{
+			"offsets": [
+				-61,
+				2
 			],
 			"loop": false,
 			"fps": 24,
@@ -13,8 +24,8 @@
 		},
 		{
 			"offsets": [
-				80,
-				120
+				90,
+				110
 			],
 			"loop": false,
 			"fps": 24,
@@ -24,8 +35,8 @@
 		},
 		{
 			"offsets": [
-				107,
-				194
+				103,
+				192
 			],
 			"loop": false,
 			"fps": 24,
@@ -35,7 +46,7 @@
 		},
 		{
 			"offsets": [
-				-51,
+				-55,
 				113
 			],
 			"loop": false,
@@ -46,7 +57,7 @@
 		},
 		{
 			"offsets": [
-				14,
+				10,
 				185
 			],
 			"loop": false,
@@ -54,36 +65,25 @@
 			"anim": "Hey",
 			"indices": [],
 			"name": "MarioLaugh"
-		},
-		{
-			"offsets": [
-				-59,
-				117
-			],
-			"indices": [],
-			"fps": 23,
-			"anim": "idle",
-			"loop": true,
-			"name": "MarioIdle"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/Mario_exe_Assets",
 	"position": [
-		-80,
-		110
+		140,
+		270
 	],
 	"healthicon": "marioex",
 	"flip_x": false,
 	"healthbar_colors": [
-		75,
+		111,
 		0,
 		0
 	],
 	"camera_position": [
-		-70,
-		-60
+		-290,
+		-230
 	],
 	"sing_duration": 4,
-	"scale": 1
+	"scale": 2
 }
