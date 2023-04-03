@@ -458,13 +458,13 @@ class PlayState extends MusicBeatState
 				suelo.scale.set(4, 4);
 				add(suelo);
 
-				var plantas:BGSprite = new BGSprite('mario/EXE1/Brick5', 240, 500, 1, 1);
+				var plantas:BGSprite = new BGSprite('mario/EXE1/Brick5', 300, 500, 1, 1);
 				plantas.setGraphicSize(Std.int(plantas.width * 1.3));
 				plantas.antialiasing = ClientPrefs.globalAntialiasing;
 				plantas.scale.set(4, 4);
 				add(plantas);
 
-				var bloques:BGSprite = new BGSprite('mario/EXE1/BricksBG2', 500, 400, 0.95, 0.95);
+				var bloques:BGSprite = new BGSprite('mario/EXE1/BricksBG2', 500, 300, 0.95, 0.95);
 				bloques.setGraphicSize(Std.int(bloques.width * 1.3));
 				bloques.antialiasing = ClientPrefs.globalAntialiasing;
 				bloques.scale.set(4, 4);
