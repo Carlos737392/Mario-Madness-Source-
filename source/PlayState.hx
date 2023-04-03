@@ -440,31 +440,31 @@ class PlayState extends MusicBeatState
 
 			GameOverSubstate.characterName = 'bfexe';
 
-				var bg:BGSprite = new BGSprite('mario/EXE1/Brick3', -400, -400, 0.45, 0.45);
+				var bg:BGSprite = new BGSprite('mario/EXE1/Brick3', 300, 300, 0.45, 0.45);
 				bg.setGraphicSize(Std.int(bg.width * 1.3));
 				bg.scale.set(4, 4);
 				bg.antialiasing = ClientPrefs.globalAntialiasing;
 				add(bg);
 
-				var castillo:BGSprite = new BGSprite('mario/EXE1/Brick4', -400, -400, 0.55, 0.55);
+				var castillo:BGSprite = new BGSprite('mario/EXE1/Brick4', 300, 300, 0.55, 0.55);
 				castillo.antialiasing = ClientPrefs.globalAntialiasing;
 				castillo.setGraphicSize(Std.int(castillo.width * 1.3));
 				castillo.scale.set(4, 4);
 				add(castillo);
 
-				var suelo:BGSprite = new BGSprite('mario/EXE1/BricksBG1', -400, -400, 1, 1);
+				var suelo:BGSprite = new BGSprite('mario/EXE1/BricksBG1', 300, 300, 1, 1);
 				suelo.antialiasing = ClientPrefs.globalAntialiasing;
 				suelo.setGraphicSize(Std.int(suelo.width * 1.3));
 				suelo.scale.set(4, 4);
 				add(suelo);
 
-				var plantas:BGSprite = new BGSprite('mario/EXE1/Brick5', -240, 600, 1, 1);
+				var plantas:BGSprite = new BGSprite('mario/EXE1/Brick5', 120, 600, 1, 1);
 				plantas.setGraphicSize(Std.int(plantas.width * 1.3));
 				plantas.antialiasing = ClientPrefs.globalAntialiasing;
 				plantas.scale.set(4, 4);
 				add(plantas);
 
-				var bloques:BGSprite = new BGSprite('mario/EXE1/BricksBG2', -400, -400, 0.95, 0.95);
+				var bloques:BGSprite = new BGSprite('mario/EXE1/BricksBG2', 300, 300, 0.95, 0.95);
 				bloques.setGraphicSize(Std.int(bloques.width * 1.3));
 				bloques.antialiasing = ClientPrefs.globalAntialiasing;
 				bloques.scale.set(4, 4);
